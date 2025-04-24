@@ -22,7 +22,7 @@ jobs:
 
   deploy:
     needs: build
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: SSH to server
         uses: appleboy/ssh-action@v1.0.3
