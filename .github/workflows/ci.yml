@@ -20,12 +20,12 @@ jobs:
     - name: Push Image 
       run: docker push  ${{secrets.REGISTRY_USERNAME}}/my-image-name:${{github.run_number}}
 
-      deploy:
-        needs: build
-        run-on: ubuntu-latest
-        steps:
-          - name: SSH to server
-            uses: appleboy/ssh-action@v1.0.3
+  deploy:
+    needs: build
+    run-on: ubuntu-latest
+    steps:
+      - name: SSH to server
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: 35.171.182.98
           username: ec2-user
