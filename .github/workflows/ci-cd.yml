@@ -4,7 +4,6 @@ on:
      Push:
         branches: ['main']
 
-
 jobs:
     build_scan:
         runs-on: ubuntu-latest
